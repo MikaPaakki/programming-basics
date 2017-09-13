@@ -8,7 +8,7 @@ namespace Task4
         static void Main(string[] args)
         {
             // Prompt user
-            Console.Write("Please enter numbers:");
+            Console.Write("Please enter first number:");
 
             // Read use input
             string userInput;
@@ -16,33 +16,73 @@ namespace Task4
 
             // Evaluate user input
 
-            int evaluatedNumber;
-            int.TryParse(userInput, out evaluatedNumber);
+            int evaluatedNumber_A;
+            int.TryParse(userInput, out evaluatedNumber_A);
 
-          
+            // Prompt user
+            Console.Write("Please second number:");
 
-            //IF > 0
-            if (evaluatedNumber > 0)
+            // Read use inptu
+            userInput = Console.ReadLine();
+
+            // Evaluate user input
+
+            int evaluatedNumber_B;
+            int.TryParse(userInput, out evaluatedNumber_B);
+
+            // Prompt user
+            Console.Write("Please third number:");
+
+            // Read use input
+            userInput = Console.ReadLine();
+
+            // Evaluate user input
+
+            int evaluatedNumber_C;
+            int.TryParse(userInput, out evaluatedNumber_C);
+
+            Console.WriteLine("1. number {0}\n2. number {1}\n3. number {2}", evaluatedNumber_A, evaluatedNumber_B, evaluatedNumber_C);
+
+            if (evaluatedNumber_A < evaluatedNumber_B)
             {
-                Console.WriteLine("Number {0} is greater than 0", evaluatedNumber);
-            }
-            //IF > 1
-            else if (evaluatedNumber > 1)
-            {
-                Console.WriteLine("Number {0} is greater than 1", evaluatedNumber);
-            }
-            //IF > 2
-            else if (evaluatedNumber > 2)
+                if(evaluatedNumber_A<evaluatedNumber_C)
+                {
+                    if(evaluatedNumber_B<evaluatedNumber_C)
+                    {
+                        Console.WriteLine("{0} - {1} - {2}", evaluatedNumber_A, evaluatedNumber_B, evaluatedNumber_C);
+                    }
+                    else
+                    {
+                        Console.WriteLine("{0} - {1} - {2}", evaluatedNumber_A, evaluatedNumber_C, evaluatedNumber_B);
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("{0} - {1} - {2}", evaluatedNumber_C, evaluatedNumber_A, evaluatedNumber_B);
 
-            {
-                Console.WriteLine("Number {0} is greater than 2", evaluatedNumber);
+                }
             }
-
             else
             {
-                Console.WriteLine("Number {0} is odd", evaluatedNumber);
-            }
+                if (evaluatedNumber_A < evaluatedNumber_C)
+                {
+                    Console.WriteLine("{0} - {1} - {2}", evaluatedNumber_B, evaluatedNumber_A, evaluatedNumber_C);
 
+                }
+                else
+                {
+                    if (evaluatedNumber_B < evaluatedNumber_C)
+                    {
+                        Console.WriteLine("{0} - {1} - {2}", evaluatedNumber_B, evaluatedNumber_C, evaluatedNumber_A);
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("{0} - {1} - {2}", evaluatedNumber_C, evaluatedNumber_B, evaluatedNumber_A);
+
+                    }
+                }
+            }
             // Wait for user input
             Console.ReadKey();
         }
