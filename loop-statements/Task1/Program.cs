@@ -8,7 +8,6 @@ namespace Task1
         {
             Console.WriteLine("Calculate factorial, please type a number");
             int factorial = 1;
-            int i = 1;
             // Read use input
             string userInput;
             userInput = Console.ReadLine();
@@ -17,7 +16,7 @@ namespace Task1
 
             int evaluatedNumber;
             int.TryParse(userInput, out evaluatedNumber);
-            for (i = 1; i <= evaluatedNumber; i++)
+            for (int i = 1; i <= evaluatedNumber; i++)
             {
                 factorial = factorial * i;
             }
