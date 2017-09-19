@@ -5,11 +5,11 @@ namespace Task4
     class Program
     {
         static void Main(string[] args)
-        
+
         {
             Console.WriteLine("laske myos negat. luvuilla, syota luku");
-            int sumNegative =0;
-            int sumPositive =0;
+            int sumNegative = 0;
+            int sumPositive = 0;
             string parseMsg = String.Empty;
             // Read use input
             string userInput;
@@ -19,18 +19,21 @@ namespace Task4
 
             int evaluatedNumber;
             int.TryParse(userInput, out evaluatedNumber);
-            for (int i = 1; i <= evaluatedNumber; i++)
+            bool isPositive = evaluatedNumber > 0;
+            Console.WriteLine(isPositive);
+            for (int i = 1; i <= Math.Abs(evaluatedNumber); i++)
             {
                 if (i != evaluatedNumber)
                 {
-                    Console.WriteLine("Number {0} is negative", i);
+                    Console.WriteLine("Number {0} is positive", i);
                     parseMsg += i + "+";
                 }
                 else
                 {
-                    Console.WriteLine("Number {0} is positive", i);
+                    Console.WriteLine("Number {0} is negative", i);
                     parseMsg += i + "=";
                 }
+
                 sumNegative = sumNegative + i;
 
                 sumPositive = sumPositive + 1;
@@ -40,5 +43,5 @@ namespace Task4
             //Console.WriteLine($"lukujen summa on {sum}");
             Console.ReadKey();
         }
-        }
     }
+}
