@@ -36,7 +36,6 @@ namespace Task5
             Console.WriteLine($"Parillisten lukujen summa on {sumEven}");
             Console.WriteLine($"Parittomien lukujen summa on {sumOdd}");
             Console.ReadKey();
-
         }
     }
 }

@@ -8,8 +8,10 @@ namespace Task4
 
         {
             Console.WriteLine("laske myos negat. luvuilla, syota luku");
-            int sumNegative = 0;
-            int sumPositive = 0;
+            int sum = 0;
+            
+            int k = 1;
+            //int sumPositive = 0;
             string parseMsg = String.Empty;
             // Read use input
             string userInput;
@@ -20,26 +22,35 @@ namespace Task4
             int evaluatedNumber;
             int.TryParse(userInput, out evaluatedNumber);
             bool isPositive = evaluatedNumber > 0;
-            Console.WriteLine(isPositive);
+            if (!isPositive)
+            {
+                k = -1;
+            }
+            //Console.WriteLine(isPositive);
+
             for (int i = 1; i <= Math.Abs(evaluatedNumber); i++)
             {
-                if (i != evaluatedNumber)
+                if (i != Math.Abs(evaluatedNumber))
                 {
-                    Console.WriteLine("Number {0} is positive", i);
-                    parseMsg += i + "+";
+                    if(isPositive)
+                        parseMsg += i * k + "+";
+                    else
+                        parseMsg += i * k;
+
+
                 }
                 else
                 {
-                    Console.WriteLine("Number {0} is negative", i);
-                    parseMsg += i + "=";
+                    //Console.WriteLine("Number {0} is negative", i);
+                    parseMsg += i * k + "=";
                 }
 
-                sumNegative = sumNegative + i;
+                sum = sum + i * k;
 
-                sumPositive = sumPositive + 1;
             }
-            Console.WriteLine($"N={evaluatedNumber} : {parseMsg} {sumNegative}");
-            Console.WriteLine($"N={evaluatedNumber} : {parseMsg} {sumPositive}");
+
+            Console.WriteLine($"N={evaluatedNumber} : {parseMsg} {sum}");
+
             //Console.WriteLine($"lukujen summa on {sum}");
             Console.ReadKey();
         }

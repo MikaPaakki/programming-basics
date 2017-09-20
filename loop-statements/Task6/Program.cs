@@ -6,14 +6,20 @@ namespace Task6
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Squareroots");
+            int number = Convert.ToInt16(Console.ReadLine());
+            for (int i = 1; i <= number; i++)
             {
-                //Console.WriteLine("Squareroots");
-
-                //for (int i = 1; i <= 10; i++) ;
-
-                //var a = Math.Round(MathSqrt(i), 2);
+                double SqrtNumber = Math.Sqrt(i);
+                Console.WriteLine("Square root of {0} is: {1}", i, SqrtNumber);
             }
+            Console.ReadLine();
+            //Console.WriteLine("Squareroots");
+
+            //for (int i = 1; i <= 10; i++) ;
+
+            //var a = Math.Round(MathSqrt(i), 2);
+
         }
     }
 }
