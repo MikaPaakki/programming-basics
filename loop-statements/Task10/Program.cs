@@ -8,16 +8,27 @@ namespace Task10
         {
             Console.WriteLine("Vakioveikkaus");
             Random rnd = new Random();
-
-
             for(int i = 0; i <= 13; i++)
             {
                 var randomNumber = rnd.NextDouble();
+                {
+                    //if
+                    {
 
-                Console.WriteLine(randomNumber);
-                Console.ReadLine();
+                    }
+                    //else if (i == 1)
+                    {
+                        //
+                    }
+                    //else
+                    {
+                        //
+                    }
+
+                    Console.WriteLine(randomNumber);
+                    Console.ReadLine();
+                }
             }
-
         }
     }
 }
