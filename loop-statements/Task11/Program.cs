@@ -19,7 +19,7 @@ namespace Task11
             Console.WriteLine("Press enter to begin");
             Console.ReadLine();
             Random rnd = new Random();
-            for (int x = 1; x <= 20; x++)
+            for (int x = 1; x <= 1000; x++)
             {
                 int flip = rnd.Next(1, 7);
                 if (flip == 1)
@@ -27,23 +27,27 @@ namespace Task11
                     Console.WriteLine("Number one");
                     one++;
                 }
-                else
+                else if (flip == 2)
                 {
                     Console.WriteLine("Number two");
                     two++;
                 }
+                else if (flip == 3)
                 {
                     Console.WriteLine("Number three");
                     three++;
                 }
+                else if (flip == 4)
                 {
                     Console.WriteLine("Number four");
                     four++;
                 }
+                else if (flip == 5)
                 {
                     Console.WriteLine("Number five");
                     five++;
                 }
+                else if (flip == 6)
                 {
                     Console.WriteLine("Number six");
                     six++;
